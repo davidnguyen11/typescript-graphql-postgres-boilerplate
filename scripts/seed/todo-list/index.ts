@@ -1,6 +1,6 @@
 var fs = require('fs');
-var { db } = require('../../../scripts/migration/db/index.ts');
-const data = require('../../../scripts/migration/todo-list/data.json')
+var { db } = require('../../../scripts/seed/db/index.ts');
+const data = require('../../../scripts/seed/todo-list/data.json');
 
 const todoListItems = [];
 

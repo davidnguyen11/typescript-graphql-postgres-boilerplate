@@ -1,4 +1,5 @@
-import { DB } from '../types/db';
-import { QueryConfig } from '../types/query-config';
+import { DB } from './db';
+import { QueryConfig } from './query-config';
+import { APIResponse } from './response';
 
-export { DB, QueryConfig };
+export { DB, QueryConfig, APIResponse };

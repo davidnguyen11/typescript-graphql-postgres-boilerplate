@@ -7,14 +7,27 @@ type Resolver = {
 
 export function getResolver() {
   let resolver: Resolver = {};
-  // Register resolvers
-  const files = readdirSync('./src/graphql/resolvers');
 
-  files.forEach(name => {
-    const fileName = `${path.resolve(__dirname, 'resolvers')}/${name}`;
+  // Register Query to resolvers
+  const queries = readdirSync('./src/graphql/resolvers/queries');
+  queries.forEach(name => {
+    const fileName = `${path.resolve(__dirname, 'resolvers/queries')}/${name}`;
     const module = require(fileName);
-    resolver.Query = (module.default && module.default.Query) ? { ...resolver.Query, ...module.default.Query } : {};
-    resolver.Mutation = (module.default && module.default.Mutation) ? { ...resolver.Mutation, ...module.default.Mutation } : {};
+    resolver.Query = {
+      ...resolver.Query,
+      ...module,
+    };
+  });
+
+  // Register Mutation to resolvers
+  const mutations = readdirSync('./src/graphql/resolvers/mutations');
+  mutations.forEach(name => {
+    const fileName = `${path.resolve(__dirname, 'resolvers/mutations')}/${name}`;
+    const module = require(fileName);
+    resolver.Mutation = {
+      ...resolver.Mutation,
+      ...module,
+    };
   });
 
   // Register scalar types

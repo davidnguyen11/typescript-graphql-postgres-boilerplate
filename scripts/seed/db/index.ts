@@ -1,4 +1,4 @@
-const { connect } = require('../../../scripts/migration/db/connect.ts');
+const { connect } = require('../../../scripts/seed/db/connect.ts');
 const pool = connect();
 
 const db = {

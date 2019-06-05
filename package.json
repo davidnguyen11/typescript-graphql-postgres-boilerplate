@@ -11,7 +11,7 @@
     "dev": "./.npm-scripts/watch.sh",
     "serve": "node dist/server.js",
     "build": "tsc",
-    "migrate": "./.npm-scripts/migration.sh"
+    "seed": "./.npm-scripts/seed.sh"
   },
   "keywords": [
     "typescript",

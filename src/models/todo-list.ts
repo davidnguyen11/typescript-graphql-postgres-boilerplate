@@ -4,3 +4,7 @@ export interface TodoListItem {
   created_at: Date;
   updated_at: Date;
 }
+
+export interface InputTodoListItem {
+  content: string;
+}
