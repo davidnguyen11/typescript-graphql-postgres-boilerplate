@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: "postgres:11"
+    container_name: "todo"
+    ports:
+    - "54320:5432"
+    volumes:
+    - todo:/var/lib/postgresql/data
+volumes:
+  todo:

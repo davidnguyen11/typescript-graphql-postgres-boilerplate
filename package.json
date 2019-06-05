@@ -1,0 +1,66 @@
+{
+  "name": "todo-api",
+  "version": "0.1.0",
+  "description": "The API back end for Todo List",
+  "author": "Dzung Nguyen <dzungnguyen179@gmail.com> (dzungnguyen179@gmail.com)",
+  "contributors": [
+    "Dzung Nguyen <dzungnguyen179@gmail.com> (dzungnguyen179@gmail.com)"
+  ],
+  "scripts": {
+    "start": "./.npm-scripts/prod.sh",
+    "dev": "./.npm-scripts/watch.sh",
+    "serve": "node dist/server.js",
+    "build": "tsc",
+    "migrate": "./.npm-scripts/migration.sh"
+  },
+  "keywords": [
+    "typescript",
+    "graphql",
+    "boilerplate",
+    "postgres",
+    "apollo",
+    "apollo-server"
+  ],
+  "dependencies": {
+    "apollo-server-express": "^2.5.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^7.0.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.4",
+    "graphql": "^14.3.1",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-type-json": "^0.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.9.0",
+    "typescript": "^3.4.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/compression": "^0.0.36",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/errorhandler": "^0.0.32",
+    "@types/express": "^4.16.1",
+    "@types/express-graphql": "^0.8.0",
+    "@types/graphql": "^14.2.0",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/pg": "^7.4.14",
+    "@types/winston": "^2.4.4",
+    "nodemon": "1.17.5",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidnguyen179/typescript-graphql-postgres-boilerplate"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidnguyen179/typescript-graphql-postgres-boilerplate/issues"
+  },
+  "homepage": "https://github.com/davidnguyen179/typescript-graphql-postgres-boilerplate/blob/master/README.md"
+}

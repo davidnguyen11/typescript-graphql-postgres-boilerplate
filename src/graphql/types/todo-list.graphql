@@ -1,0 +1,18 @@
+type TodoListItem {
+  id: ID!
+  content: String!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input InputTodoListItem {
+  content: String!
+}
+
+type Query {
+  todoList(slug: String): [TodoListItem]
+}
+
+type Mutation {
+  createTodoItem(comment: InputTodoListItem): TodoListItem!
+}
