@@ -1,11 +1,12 @@
 version: '3'
 services:
   db:
-    image: "postgres:11"
-    container_name: "todo"
+    build:
+      context: './database'
+      args:
+        POSTGRES_USER: 'docker'
+        POSTGRES_PASSWORD: 'docker'
+        POSTGRES_DB: 'todo'
+    container_name: 'todo'
     ports:
-    - "54320:5432"
-    volumes:
-    - todo:/var/lib/postgresql/data
-volumes:
-  todo:
+      - '54320:5432'

@@ -1,0 +1,9 @@
+FROM postgres:11
+
+ARG POSTGRES_USER
+ARG POSTGRES_DB
+
+ENV POSTGRES_USER $POSTGRES_USER
+ENV POSTGRES_DB $POSTGRES_DB
+
+ADD /sql/database.sql /docker-entrypoint-initdb.d/

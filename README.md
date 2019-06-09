@@ -1,14 +1,14 @@
-# Todo API
+# Typescript & GraphQL & Postgres Boilerplate
 
-# Getting started
+- [Getting started](#getting-started)
+  - [Database](#database)
+  - [Automatic code splitting](#automatic-code-splitting)
 
-## Database
+## Getting started
 
 Make sure you have [Docker](https://www.docker.com/) installed
 
-### Setting up
-
-**Commands**
+### Database
 
 To install the database management, run:
 
@@ -25,7 +25,7 @@ docker exec -it todo psql -U postgres -c "create database todo"
 **.env file**
 
 1. Create the `.env` file
-2. Copy and parse the `connection information` below:
+2. Copy and parse the connection information below:
 
 ```bash
 DB_USER=postgres
