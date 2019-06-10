@@ -9,4 +9,4 @@ WORKDIR /todo_api
 COPY --from=builder /todo_api ./
 RUN yarn install --production=true
 EXPOSE 8080
-ENTRYPOINT ["yarn", "serve"]
+ENTRYPOINT ["yarn"]

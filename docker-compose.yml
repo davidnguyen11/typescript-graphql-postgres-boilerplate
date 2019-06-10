@@ -3,9 +3,9 @@ services:
   db:
     image: "postgres:11"
     container_name: "todo"
+    env_file:
+    - ./.env
     ports:
     - "54320:5432"
     volumes:
-    - todo:/var/lib/postgresql/data
-volumes:
-  todo:
+    - ./database/sql/database.sql:/docker-entrypoint-initdb.d/database.sql

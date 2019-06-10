@@ -1,5 +1,3 @@
-create database todo;
-
 create table todo_list
 (
   id serial primary key not null,

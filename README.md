@@ -8,35 +8,23 @@ Make sure you have [Docker](https://www.docker.com/) installed
 
 ### Setting up
 
-**Commands**
-
-To install the database management, run:
-
-```bash
-docker-compose up -d
-```
-
-To create database, run:
-
-```bash
-docker exec -it todo psql -U postgres -c "create database todo"
-```
-
 **.env file**
 
 1. Create the `.env` file
 2. Copy and parse the `connection information` below:
 
 ```bash
-DB_USER=postgres
-DB_HOST=localhost
-DB_DATABASE=todo
-DB_PORT=54320
+POSTGRES_USER=docker
+POSTGRES_PASSWORD=docker
+POSTGRES_HOST=localhost
+POSTGRES_DB=todo
+POSTGRES_PORT=54320
 ```
 
-## Create tables
-
-Open and run the `database/sql/database.sql` by postgres tools (i.e. [pgAdmin](https://www.pgadmin.org/))
+**database**
+```bash
+docker-compose up -d
+```
 
 ## Seeding data
 
