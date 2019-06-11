@@ -1,9 +1,5 @@
 # Typescript & GraphQL & Postgres Boilerplate
 
-- [Getting started](#getting-started)
-  - [Database](#database)
-  - [Automatic code splitting](#automatic-code-splitting)
-
 ## Getting started
 
 Make sure you have [Docker](https://www.docker.com/) installed
